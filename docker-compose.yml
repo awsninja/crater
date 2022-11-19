@@ -54,6 +54,7 @@ services:
     build:
       context: ./
       dockerfile: ./docker-compose/cron.dockerfile
+    restart: unless-stopped
     volumes:
       - ./:/var/www
     networks:
